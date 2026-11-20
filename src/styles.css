@@ -1,12 +1,12 @@
 :root {
   /* --bg: #12161c; original background */
-  --bg: #915727;
+  --bg: #000000;
   --pn: #1a2029;
   --ln: #2b3440;
   --tx: #e6edf3;
   --dm: #8b98a8;
-  --ac: #4fc3d9;
-  --ed: #ff9a3d;
+  --ac: #ff9a3d;
+  --ed: #4fc3d9;
   color-scheme: dark;
 }
 * {

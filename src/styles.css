@@ -1,0 +1,276 @@
+:root {
+  /* --bg: #12161c; original background */
+  --bg: #915727;
+  --pn: #1a2029;
+  --ln: #2b3440;
+  --tx: #e6edf3;
+  --dm: #8b98a8;
+  --ac: #4fc3d9;
+  --ed: #ff9a3d;
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--tx);
+  font:
+    14px/1.35 "Avenir Next",
+    system-ui,
+    sans-serif;
+}
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--ln);
+  background: var(--pn);
+}
+header h1 {
+  font-size: 17px;
+  margin: 0 8px 0 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+#st {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--dm);
+  font-size: 12px;
+  margin-left: auto;
+  max-width: 42ch;
+}
+#dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #555;
+  flex: none;
+}
+#dot.on {
+  background: #4ade80;
+}
+button,
+.btn,
+select,
+input[type="text"],
+input[type="number"] {
+  background: #232b36;
+  color: var(--tx);
+  border: 1px solid var(--ln);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font: inherit;
+}
+
+.hd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
+.eq-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 0;
+}
+.sub {
+  margin-left: 0;
+  padding: 2px 0;
+  color: var(--dm);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+}
+button,
+.btn {
+  cursor: pointer;
+}
+button:hover {
+  border-color: var(--ac);
+}
+button.sw,
+button.sw.on {
+  width: 36px;
+  height: 20px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #36404d;
+  border-color: var(--ln);
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: none;
+  margin: 0;
+}
+button.sw i {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e6edf3;
+  transition: transform 0.15s ease;
+}
+button.sw.on {
+  background: var(--ac);
+  border-color: var(--ac);
+  justify-content: flex-end;
+}
+button.sw.on i {
+  background: #fdfdfd;
+}
+button.on {
+  background: var(--ac);
+  color: #06222a;
+  border-color: var(--ac);
+  font-weight: 700;
+}
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--ed);
+  outline-offset: 1px;
+}
+main {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px;
+}
+.col {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+.card {
+  background: var(--pn);
+  border: 1.5px solid var(--bn);
+  border-radius: 10px;
+  padding: 12px;
+}
+.card h2 {
+  font-size: 13px;
+  margin: 0 0 10px;
+  color: var(--ac);
+  font-weight: 700;
+}
+.row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.row > input[type="text"] {
+  flex: 1;
+  min-width: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px 14px;
+}
+.c {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 8px;
+  align-items: center;
+}
+.c span {
+  color: var(--dm);
+  font-size: 12px;
+}
+.c output {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  text-align: right;
+}
+.c input,
+.c select {
+  grid-column: 1/3;
+  width: 100%;
+}
+input[type="range"] {
+  accent-color: var(--ac);
+  height: 22px;
+  margin: 0;
+}
+#modes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+#modes button {
+  padding: 8px 4px;
+  font-size: 12px;
+}
+canvas {
+  width: 100%;
+  height: 300px;
+  display: block;
+  background: #0e1217;
+  border-radius: 8px;
+  touch-action: none;
+}
+.hint {
+  color: var(--dm);
+  font-size: 12px;
+  margin: 6px 0 0;
+}
+.lib {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.lib span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lib button {
+  padding: 3px 8px;
+  font-size: 12px;
+}
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: 1fr;
+    overflow: auto;
+  }
+  .col {
+    overflow: visible;
+  }
+  #root {
+    display: block;
+    height: auto;
+  }
+}
+
+.btn {
+  display: inline-block;
+}
+.btn:hover {
+  border-color: var(--ac);
+}
